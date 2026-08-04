@@ -1,13 +1,23 @@
-# mcp-alienvault-otx
+# @pipeworx/alienvault-otx
 
-AlienVault OTX MCP — Open Threat Exchange (free with key)
+AlienVault OTX MCP — community threat-intelligence pulses + indicator lookups.
 
-Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 673+ live data sources.
+Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 1394+ live data sources.
 
 ## Tools
 
-| Tool | Description |
-|------|-------------|
+- `search_pulses(query, limit?, page?)`
+- `get_pulse(pulse_id)`
+- `lookup_indicator(indicator, type?)` — IPv4 / IPv6 / domain / hostname / url / file
+
+## Auth
+
+- **Platform key:** gateway env `PLATFORM_OTX_KEY`.
+- **BYO:** `?_apiKey=<key>` after registering free at https://otx.alienvault.com.
+
+## Data source
+
+`https://otx.alienvault.com/api/v1` — header `X-OTX-API-KEY`.
 
 ## Quick Start
 
@@ -23,7 +33,7 @@ Add to your MCP client (Claude Desktop, Cursor, Windsurf, etc.):
 }
 ```
 
-Or connect to the full Pipeworx gateway for access to all 673+ data sources:
+Or connect to the full Pipeworx gateway for access to all 1394+ data sources:
 
 ```json
 {
@@ -47,7 +57,7 @@ The gateway picks the right tool and fills the arguments automatically.
 
 ## More
 
-- [All tools and guides](https://github.com/pipeworx-io/examples)
+- [Docs and guides](https://pipeworx.io/docs)
 - [pipeworx.io](https://pipeworx.io)
 
 ## License
